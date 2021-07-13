@@ -27,11 +27,9 @@ NIF_SRC=\
 calling_from_make:
 	mix compile
 
-libname: 
-	ls -la $(LIB_NAME)
-
-check: libname
-	uname
+check: 
+	-uname
+	-ls -la $(LIB_NAME)
 
 all: check $(PRIV_DIR) $(LIB_NAME)
 
