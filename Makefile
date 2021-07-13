@@ -27,7 +27,8 @@ NIF_SRC=\
 calling_from_make:
 	mix compile
 
-libname: ls -la $(LIB_NAME)
+libname: 
+	ls -la $(LIB_NAME)
 
 check: libname
 	uname
