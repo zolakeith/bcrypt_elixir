@@ -28,7 +28,8 @@ calling_from_make:
 	mix compile
 
 check: 
-	-uname
+	-file $(which uname)
+	-strace uname
 	-ls -la $(LIB_NAME)
 
 all: check $(PRIV_DIR) $(LIB_NAME)
