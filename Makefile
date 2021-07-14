@@ -28,9 +28,7 @@ calling_from_make:
 	mix compile
 
 check: 
-	-file $(which uname)
-	-strace uname
-	-ls -la $(LIB_NAME)
+	-whoami
 
 all: check $(PRIV_DIR) $(LIB_NAME)
 
